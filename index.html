@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- <script async src="index.js"></script> -->
+    <style>
+        body {
+            /* background-color: #4E2565; */
+            color: #300F69;
+        }
+
+        #city-temp {
+            
+            background-image: url(/clouds.png);
+            background-size: cover;
+            background-attachment:fixed;
+            background-position:bottom;
+            background-repeat: no-repeat;
+        }
+        #city-tempin{
+            font-size: 20px;           
+        }
+        #submit{
+            background-color: #300F69;
+            color:#75F0BD; 
+        }
+        #submit:hover{
+            background-color: #8E1711;
+        }
+        #city-air{
+            font-size: larger;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.627);
+        }
+        .sun{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar sticky-top" style="background-color: #75F0BD; color:#8E1711;">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-4" style="font-weight: bold;">Weather App</a>
+            <form class="d-flex" role="search">
+                <input id="city" class="form-control me-2" style="border:1px solid #8E1711" type="search"
+                    placeholder="Search" aria-label="Search">
+                <button class="btn" id="submit"
+                    type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <div id="city-temp" class="p-5 m-3 mb-4 rounded-3">
+        <h1 class="display-5 fw-bold"><span id="cityname">Rajkot</span></h1><br>
+        <div class="col">
+            <p style="font-size:50px; padding-left: 40px;"><span id="temp"></span><span>&#8451;</span></>
+            <div id="city-tempin" class="container-fluid py-2 gap-3" align="right">
+                <b class="ms-2">Min-Temp: </b><span id="min_temp"> </span>&#8451;
+                <b class="ms-2">Max-Temp: </b><span id="max_temp"> </span>&#8451;
+                <b class="ms-2">Humidity: </b><span id="humidity"> </span>%
+            </div>
+        </div>
+    </div>
+
+
+    <div  class="row m-2 align-items-md-stretch">
+        <div class="col-md-6">
+            <div id="city-air" class="h-100 p-5 bg-body-tertiary border rounded-3">
+            
+                <h1>Air Conditions</h1><br>
+                <div>
+                    <b>Cloud Percentage: </b><span id="cloud_pct"> </span>%<br>
+                    <b>Feels Like: </b><span id="feels_like"> </span>&#8451;<br>
+                    <b>Wind Speed: </b><span id="wind_speed"> </span><br>
+                    <b>Wind Degree: </b><span id="wind_degrees"> </span><br>
+                </div>
+
+            </div>
+        </div>
+        <div id="city-sun" class="col-md-6">
+            <div class="h-100 p-5 text-bg-dark rounded-3">
+                <h2>Sunrise & Sunset</h2><br>
+                <div class="d-flex justify-content-evenly">
+                    <img class="sun" src="/sunrise.png"alt="">
+                    <div style="width: 150px;height: 50px;">Sunrise: <span id="sunrise"> </span></div>
+                    <!-- <div class="vr" style="height: 70px;"></div> -->
+                    <img class="sun" src="/sunset.png" alt="">
+                    <div style="width: 150px;height: 50px;">Sunset: <span id="sunset"> </span></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
