@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.text{
+    position: absolute;
+    background:none;
+}
+.background-container {
+    /* Set the background image */
+    background-image: url('wall.png');
+    /* Adjust the size and position of the background image as needed */
+    background-size: cover;
+    background-position: center;
+    /* Set the container size to cover the whole viewport */
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    /* Apply the blur effect */
+    filter: blur(5px); /* Adjust the blur amount as needed */
+    /* Add other styles or content if needed */
+}
