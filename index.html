@@ -15,38 +15,44 @@
         }
 
         #city-temp {
-            
+
             background-image: url(img.jpg);
             background-size: cover;
-            background-attachment:fixed;
-            background-position:bottom;
+            background-attachment: fixed;
+            background-position: bottom;
             background-repeat: no-repeat;
             color: #fff;
-            
+
         }
-        #city-tempin{
+
+        #city-tempin {
             font-size: 20px;
-            
-                   
+
+
         }
-        #submit{
+
+        #submit {
             background-color: #f7cd90;
-            color:#000;
-            margin-left: 10px; 
+            color: #000;
+            margin-left: 10px;
         }
-        #submit:hover{
+
+        #submit:hover {
             background-color: #ffffff;
         }
-        #city-air{
+
+        #city-air {
             font-size: larger;
             box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.627);
         }
-        .sun{
+
+        .sun {
             width: 100px;
             height: 100px;
             margin-left: 10px;
         }
-        .air{
+
+        .air {
             width: 150px;
             height: 150px;
             padding: auto;
@@ -56,23 +62,22 @@
 </head>
 
 <body>
-    <nav class="text-bg-dark m-2 rounded-5 navbar " style="color:#fff;">
+    <nav class=" rounded-5 navbar " style="color:#fff;">
         <div class="container-fluid">
-            <a class="navbar-brand ms-4" style="font-weight: bold;color:#fff;">Weather App</a>
-            <form class="d-flex m-lg-2 " role="search">
-                <input id="city" class="form-control me-2" style="border:1px solid #8E1711" type="search"
+            <a class="navbar-brand ms-4" style="font-weight: bold;color:#00000072;">Weather App</a>
+            <form class="d-flex " role="search">
+                <input id="city" class="form-check rounded-2" style="border:1px solid #00000063" type="search"
                     placeholder="Search" aria-label="Search">
-                <button class="btn" id="submit"
-                    type="submit">Search</button>
+                <button class="btn-sm bg-light border-1  rounded-2 py-0" id="submit" type="submit">Search</button>
             </form>
         </div>
     </nav>
 
 
-    <div id="city-temp" class="p-5 m-3 mb-4 rounded-3">
+    <div id="city-temp" class="p-5 m-3 mt-0  mb-4 rounded-4">
         <h1 class="display-5 fw-bold"><span id="cityname">Rajkot</span></h1><br>
         <div class="col">
-            <p style="font-size:50px; padding-left: 40px;"><span id="temp"></span><span>&#8451;</span></>
+            <p style="font-size:50px; padding-left: 40px;"><span id="temp"></span><span>&#8451;</span>
             <div id="city-tempin" class="container-fluid py-2 gap-3" align="right">
                 <b class="ms-2">Min-Temp: </b><span id="min_temp"> </span>&#8451;
                 <b class="ms-2">Max-Temp: </b><span id="max_temp"> </span>&#8451;
@@ -82,30 +87,30 @@
     </div>
 
 
-    <div  class="row m-2 align-items-md-stretch">
+    <div class="row m-2 align-items-md-stretch">
         <div class="col-md-6">
-            <div id="city-air" class="d-flex h-100 p-5 bg-body-tertiary border rounded-3">
-                
+            <div id="city-air" class="d-flex h-100 p-5 bg-body-tertiary border rounded-4">
+
                 <div>
                     <h1>Air Conditions</h1><br>
                     <b>Cloud Percentage: </b><span id="cloud_pct"> </span>%<br>
                     <b>Feels Like: </b><span id="feels_like"> </span>&#8451;<br>
-                    <b>Wind Speed: </b><span id="wind_speed"> </span><br>
-                    <b>Wind Degree: </b><span id="wind_degrees"> </span><br>
+                    <b>Wind Speed: </b><span id="wind_speed"> </span> km/hr<br>
+                    <b>Wind Degree: </b><span id="wind_degrees"> </span>&deg;<br>
                 </div>
                 <img src="fresh-air.png" class="air" alt="">
 
             </div>
         </div>
         <div id="city-sun" class="col-md-6">
-            <div class="h-100 p-5 text-bg-dark rounded-3">
-                <h2>Sunrise & Sunset</h2><br>
-                <div class="d-flex justify-content-evenly">
-                    <img class="sun" src="sunrise.png"alt="">
-                    <div style="font-size:20px;width: 150px;height: 50px;">Sunrise: <span id="sunrise"> </span></div>
+            <div class="h-100 p-4 text-bg-dark rounded-4">
+                <h2 style="padding: 13px;">Sunrise & Sunset</h2><br>
+                <div align="center" class="d-flex justify-content-evenly">
+                    <img class="sun" src="sunrise.png" alt="">
+                    <div style="font-size:20px;width: 160px;height: 50px;">Sunrise <br><span id="sunrise"> </span></div>
                     <div class="vr" style="height: 120px;"></div>
                     <img class="sun" src="sunset.png" alt="">
-                    <div style="font-size:20px;width: 150px;height: 50px;">Sunset: <span id="sunset"> </span></div>
+                    <div style="font-size:20px;width: 150px;height: 50px;">Sunset <br><span id="sunset"> </span></div>
                 </div>
 
             </div>
